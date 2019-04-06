@@ -3,6 +3,7 @@
 		<div class="col-md-3">
 			<div class="contact-info">
 				<img src="https://image.ibb.co/kUASdV/contact-image.png" alt="image"/>
+        <h3>SMS</h3>
 			</div>
 		</div>
 		<div class="col-md-9">
@@ -15,18 +16,18 @@
 				<div class="form-group">
 				  <label class="control-label col-sm-5" for="number">Mobile Number:</label>
 				  <div class="col-sm-7">
-					<input type="text" class="form-control" id="number" placeholder="Enter number" name="number">
+					<input type="text" [(ngModel)]="message.number" class="form-control" id="number" placeholder="Enter number" name="number">
 				  </div>
 				</div>
 				<div class="form-group">
 				  <label class="control-label col-sm-2" for="message">Message:</label>
 				  <div class="col-sm-12">
-					<textarea class="form-control" rows="5" id="message"></textarea>
+					<textarea class="form-control" [(ngModel)]="message.message" rows="5" placeholder="Enter message" maxlength="160" id="message"></textarea>
 				  </div>
 				</div>
 				<div class="form-group">        
 				  <div class="col-sm-offset-2 col-sm-10">
-					<button type="submit" class="btn btn-default">Send</button>
+					<button type="submit" (click)="Send()" class="btn btn-default">Send</button>
 				  </div>
 				</div>
 			</div>
