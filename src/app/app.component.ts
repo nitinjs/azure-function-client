@@ -19,8 +19,8 @@ export class AppComponent  {
   }
 
   Send(){
-    alert("Sending sms, please wait...");
-    this.httpClient.get(this.baseUrl + '&number=' + this.message.number + '&message=' + this.message.message).subscribe((res)=>{
+    alert("Sending sms...");
+    this.httpClient.get(this.baseUrl + '&number=' + this.message.number + '&message=' + this.message.message).subscribe((x)=>{}, (y)=>{},()=>{
             alert("Message sent successfully!");
             this.message = {
       message: "",
